@@ -182,8 +182,7 @@ with st.sidebar.form(key='student_input_form'):
         st.subheader("Indikator Ekonomi Makro")
         for col_name_actual, user_label in macro_cols_map.items():
             if col_name_actual in all_expected_features:
-                 input_data[col_name_actual] = st.number_input(user_label, value=0.0, step=0.01 if col_name_actual == 'GDP' else 0.1)
-
+                input_data[col_name_actual] = st.number_input(user_label, value=0.0, step=0.01 if col_name_actual == 'GDP' else 0.1)
 
     # Input untuk fitur yang murni kategorikal (jika ada dan bertipe object di training)
     if categorical_features:
@@ -231,18 +230,10 @@ if submit_button:
     for feature_name in all_expected_features:
         if feature_name not in data_to_process:
             missing_features.append(feature_name)
-            # Sediakan nilai default yang aman jika fitur tidak ada (misalnya 0 untuk numerik, atau mode untuk kategori)
-            # Ini adalah fallback, idealnya semua fitur terisi dari form.
-            # if feature_name in numerical_features:
-            #     data_to_process[feature_name] = 0 # Atau np.nan jika imputer akan menangani
-            # else: # Untuk categorical_features yang mungkin tidak ter-OHE jika tidak ada di form
-            #     data_to_process[feature_name] = "Missing" # Atau mode dari training data
 
     if missing_features:
         st.error(f"Fitur berikut tidak ditemukan dalam input yang diproses: {', '.join(missing_features)}. Harap periksa form input dan mapping.")
-        # Hentikan eksekusi jika ada fitur yang hilang, karena akan menyebabkan error di preprocessor
         st.stop()
-
 
     try:
         input_df = pd.DataFrame([data_to_process], columns=all_expected_features)
