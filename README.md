@@ -16,7 +16,7 @@ Proyek ini bertujuan untuk membangun sebuah sistem prediktif yang dapat membantu
 Cakupan proyek ini meliputi tahapan-tahapan berikut:
 1. Pemahaman Data (Data Understanding)
 2. Persiapan Data (Data Preparation)
-3. Pemodelan (Modeling) untuk memprediksi kemungkinan mahasiswa mengalami dropout
+3. Pemodelan (Modeling) untuk memprediksi status akademik mahasiswa (Dropout, Enrolled, Graduate)
 4. Evaluasi (Evaluation)
 5. Interpretasi Model
 6. Deployment
@@ -55,15 +55,44 @@ streamlit run app.py
 ```
 
 ## Business Dashboard
-Dashboard potensial dapat memvisualisasikan:
-* Distribusi status mahasiswa (Dropout, Enrolled, Graduate) secara keseluruhan dan per program studi/angkatan.
-* Tren angka dropout/kelulusan dari waktu ke waktu.
-* Profil mahasiswa berdasarkan faktor risiko yang teridentifikasi oleh model.
-* Efektivitas program intervensi (jika data tersedia).
+Dashboard ini menyajikan ringkasan data mahasiswa, mencakup statistik deskriptif, pola distribusi nilai, serta faktor-faktor yang memengaruhi potensi dropout. Tujuan utama dashboard ini adalah membantu para pengambil keputusan untuk mengenali pola dan tren yang muncul dalam data tersebut.
 
-*(Jika Anda mengembangkan dashboard terpisah, jelaskan di sini dan sertakan linknya).*
-Insight:
-1. Status pernikahan memiliki potensi hubungan terhadap status pendidikan. Individu yang menikah, bercerai, atau terpisah hukum cenderung memiliki tingkat dropout lebih tinggi dibandingkan yang masih lajang. Sebaliknya, individu yang masih berstatus “Single” lebih banyak ditemukan dalam kategori “Graduate”, yang dapat menunjukkan bahwa status lajang mendukung konsistensi dan keberhasilan dalam menyelesaikan pendidikan.
+Tampilan dashboard:
+![Gambaran Dashboard](Dashboard_Analisa_Siswa_Jaya_Jaya_Institut.png)
+
+> **Note**  
+> Link ke dashboard: [Dashboard Analisa Murid Jaya Jaya Institut](https://public.tableau.com/app/profile/felicia.pangestu7204/viz/JayaJayaInstitut_17486987118240/DashboardAnalisaSiswaJayaJayaInstitut?publish=yes)
+
+Berikut adalah beberapa insight yang dapat ditarik dari dashboard "Dashboard Analisa Siswa Jaya Jaya Institut":
+1.  **Status Pernikahan dan Implikasinya terhadap Studi:**
+    * Status pernikahan menunjukkan potensi hubungan dengan status akhir pendidikan mahasiswa. Individu yang berstatus menikah, bercerai, atau terpisah secara hukum memiliki kecenderungan tingkat *dropout* yang lebih tinggi dibandingkan dengan mereka yang masih lajang.
+    * Sebaliknya, mahasiswa yang berstatus "Single" (lajang) lebih dominan dalam kategori "Graduate". Hal ini mengindikasikan bahwa status lajang mungkin berkorelasi dengan konsistensi dan fokus yang lebih tinggi dalam menyelesaikan studi.
+    * *Observasi Tambahan:* Proporsi *dropout* pada kategori "Married" tampak paling signifikan, bahkan mungkin melebihi proporsi "Graduate" pada kategori status pernikahan tersebut.
+
+2.  **Distribusi Umum Status Mahasiswa:**
+    * Secara keseluruhan, sekitar 49.93% dari populasi mahasiswa berhasil mencapai status "Graduate".
+    * Meskipun demikian, angka "Dropout" juga cukup substansial, yaitu sekitar 32.19%, yang menunjukkan adanya area signifikan untuk perbaikan dalam hal retensi mahasiswa.
+    * Sekitar 17.88% mahasiswa lainnya masih aktif dalam status "Enrolled".
+    * *Potensi Tindakan:* Menganalisis lebih dalam penyebab utama dari sepertiga mahasiswa yang mengalami *dropout* harus menjadi prioritas utama institusi.
+
+3.  **Peran Gender dalam Hasil Akademik:**
+    * Terdapat indikasi perbedaan performa akademik antara mahasiswa perempuan dan laki-laki. Mahasiswi (Perempuan) cenderung menunjukkan proporsi "Graduate" yang relatif lebih tinggi dibandingkan dengan proporsi "Dropout" mereka.
+    * Pada mahasiswa (Laki-Laki), proporsi "Dropout" tampak lebih signifikan dan mungkin sebanding atau bahkan sedikit lebih tinggi dari proporsi "Graduate" mereka.
+    * *Potensi Tindakan:* Investigasi lebih lanjut mengenai faktor-faktor spesifik yang mungkin memengaruhi perbedaan ini diperlukan. Perlu dipertimbangkan apakah program dukungan yang disesuaikan berdasarkan gender dapat memberikan hasil yang lebih baik.
+
+4.  **Dampak Signifikan Program Beasiswa terhadap Keberhasilan Studi:**
+    * Mahasiswa yang merupakan penerima beasiswa ("Scholarship holder: Yes") menunjukkan tingkat kelulusan ("Graduate") yang sangat dominan dan tingkat "Dropout" yang sangat rendah.
+    * Sebaliknya, mahasiswa yang tidak menerima beasiswa memiliki proporsi "Dropout" yang jauh lebih tinggi dan proporsi "Graduate" yang secara persentase lebih rendah.
+    * *Potensi Tindakan:* Hal ini mengonfirmasi efektivitas program beasiswa, tidak hanya dalam aspek finansial tetapi juga kemungkinan dalam memotivasi atau sebagai indikator seleksi mahasiswa dengan potensi keberhasilan tinggi. Perluasan program beasiswa atau bentuk bantuan finansial lainnya bisa menjadi strategi efektif untuk menekan angka *dropout*.
+
+5.  **Korelasi Usia Saat Pendaftaran dengan Keberhasilan Studi:**
+    * Usia saat pendaftaran (`Age at enrollment`) menunjukkan korelasi yang jelas dengan status akhir akademik. Kelompok usia termuda (terlihat paling jelas pada rentang 17-20 tahun di dashboard) memiliki proporsi "Graduate" tertinggi.
+    * Seiring bertambahnya usia pendaftaran (terutama pada kelompok usia 26 tahun ke atas, dan sangat signifikan pada kelompok usia di atas 35 tahun), proporsi "Dropout" cenderung meningkat secara signifikan, sementara proporsi "Graduate" menurun.
+    * *Potensi Tindakan:* Mahasiswa yang mendaftar pada usia yang lebih matang mungkin menghadapi tantangan unik (misalnya, komitmen kerja, tanggung jawab keluarga) dan karenanya memerlukan sistem dukungan yang lebih fleksibel, program studi yang disesuaikan, atau layanan konseling yang spesifik.
+
+6.  **Konfirmasi Faktor Kunci dari Model Prediktif (Berdasarkan "Top 5 Faktor Kunci"):**
+    * Visualisasi "Top 5 Faktor Kunci Status Akademik Mahasiswa" pada dashboard mengonfirmasi temuan dari model prediktif yang telah dibangun. Faktor-faktor seperti `Tuition fees up to date` (status pembayaran SPP), `Curricular units 1st sem (approved)` (jumlah SKS lulus semester 1), `Curricular units 2nd sem (approved)` (jumlah SKS lulus semester 2), `Age at enrollment` (usia saat pendaftaran), dan `Scholarship holder` (penerima beasiswa) adalah penentu atau indikator paling kuat terhadap status akademik mahasiswa.
+    * *Potensi Tindakan:* Menguatkan fokus pada intervensi yang berkaitan dengan kelancaran pembayaran SPP (bantuan finansial, skema cicilan), memastikan keberhasilan akademik di semester-semester awal (program pendampingan, tutorial), memberikan perhatian khusus pada mahasiswa dewasa, dan terus mengevaluasi serta meningkatkan efektivitas program beasiswa.
 
 
 ## Menjalankan Sistem Machine Learning
@@ -89,43 +118,63 @@ Sistem machine learning yang dikembangkan terdiri dari dua bagian utama:
 
 *(Jika Anda mendeploy aplikasi Streamlit atau prototipe lainnya secara online, sertakan linknya di sini).*
 Contoh:
-`Prototipe aplikasi Streamlit dapat diakses (jika dideploy) di: [Link ke Aplikasi Streamlit Anda]`
-`Saat ini, aplikasi hanya dapat dijalankan secara lokal.`
+`Prototipe aplikasi Streamlit dapat diakses di: [Link ke Aplikasi Streamlit Anda]`
+> **Note**  
+> Link Aplikasi prediksi: [Prediksi status siswa](https://preditctstudentdropout.streamlit.app/)
 
 ## Conclusion
-Proyek data science ini telah berhasil mengembangkan model machine learning, yaitu **[ISI DENGAN NAMA MODEL TERBAIK DARI OUTPUT NOTEBOOK ANDA, contoh: Random Forest Classifier]**, yang fungsional untuk memprediksi status akademik mahasiswa di Jaya Jaya Institut. Model ini mencapai tingkat akurasi sebesar **[ISI DENGAN NILAI AKURASI AKTUAL DARI OUTPUT NOTEBOOK ANDA, contoh: 78.5%]** dan F1-Score (weighted) sebesar **[ISI DENGAN NILAI F1-SCORE AKTUAL DARI OUTPUT NOTEBOOK ANDA, contoh: 0.78]** pada data uji.
+Proyek data science ini telah berhasil mengembangkan sebuah model machine learning, yaitu Random Forest Classifier, yang mampu memprediksi status akademik mahasiswa di Jaya Jaya Institut. Model ini mencapai tingkat akurasi sebesar 76.38% dan F1-Score sebesar 0.7493 pada data uji.
 
-Analisis lebih lanjut terhadap model terbaik juga berhasil mengidentifikasi beberapa faktor kunci yang signifikan memengaruhi status kelulusan atau dropout mahasiswa. Fitur-fitur (variabel) paling berpengaruh yang teridentifikasi oleh model antara lain:
-* **[ISI DENGAN FITUR PENTING 1 DARI OUTPUT NOTEBOOK ANDA, contoh: Curricular units 2nd sem (grade)]**
-* **[ISI DENGAN FITUR PENTING 2 DARI OUTPUT NOTEBOOK ANDA, contoh: Tuition fees up to date]**
-* **[ISI DENGAN FITUR PENTING 3 DARI OUTPUT NOTEBOOK ANDA, contoh: Curricular units 1st sem (approved)]**
-* **[ISI DENGAN FITUR PENTING 4 DARI OUTPUT NOTEBOOK ANDA, contoh: Age at enrollment]**
-* **[ISI DENGAN FITUR PENTING 5 DARI OUTPUT NOTEBOOK ANDA, contoh: Scholarship holder]**
-    *(Sesuaikan daftar ini dengan 5-7 fitur teratas dari plot feature importance di notebook Anda).*
+Analisis faktor penting dari model, yang juga terkonfirmasi secara visual melalui dashboard "Analisa Siswa Jaya Jaya Institut", menunjukkan bahwa beberapa faktor kunci yang paling signifikan memengaruhi status kelulusan atau *dropout* mahasiswa meliputi:
 
-Model prediktif yang dikembangkan dalam proyek ini memberikan Jaya Jaya Institut alat yang berharga untuk secara proaktif mengidentifikasi mahasiswa yang berisiko `Dropout` atau memerlukan dukungan tambahan. Wawasan dari fitur-fitur penting dapat menginformasikan desain intervensi yang lebih terarah dan efektif, membantu institut mencapai target peningkatan retensi dan kelulusan mahasiswa.
+  * `Curricular units 2nd sem (approved)` (Jumlah SKS Lulus Semester 2)
+  * `Curricular units 2nd sem (grade)` (Jumlah SKS Lulus Semester 2)
+  * `Curricular units 1st sem (approved)` (Jumlah SKS Lulus Semester 1)
+  * `Curricular units 1st sem (grade)` (Jumlah SKS Lulus Semester 1)
+  * `Admission grade` (Nilai Saat Pendaftaran)
+  * `Age at enrollment` (Usia Saat Pendaftaran)
+  * `Tuition fees up to date` (Status Pembayaran Uang Kuliah)
+
+Selain itu, analisis dashboard juga memberikan *insight* tambahan mengenai tren pada kelompok mahasiswa berdasarkan:
+
+  * **Status Pernikahan:** Mahasiswa lajang cenderung memiliki tingkat kelulusan lebih tinggi, sedangkan yang menikah, bercerai, atau berpisah menunjukkan risiko *dropout* lebih tinggi.
+  * **Gender:** Terdapat indikasi perbedaan tingkat kelulusan dan *dropout* antara mahasiswa laki-laki dan perempuan, di mana mahasiswi cenderung memiliki rasio kelulusan yang lebih baik.
+  * **Status Beasiswa:** Penerima beasiswa secara signifikan menunjukkan performa akademik yang lebih baik dan risiko *dropout* yang jauh lebih rendah.
+  * **Usia Saat Pendaftaran:** Mahasiswa yang mendaftar pada usia lebih muda (17-20 tahun) memiliki tingkat kelulusan tertinggi, dengan risiko *dropout* yang meningkat seiring bertambahnya usia pendaftaran.
+
 
 ### Rekomendasi Action Items
-Berdasarkan hasil analisis dan model yang dibangun, berikut adalah beberapa rekomendasi action items yang dapat diikuti oleh Jaya Jaya Institut untuk menyelesaikan permasalahan dan mencapai target mereka:
+Berdasarkan kesimpulan dan *insight* yang diperoleh, berikut adalah beberapa rekomendasi *action items* yang dapat diimplementasikan oleh Jaya Jaya Institut:
 
-1.  **Implementasi Sistem Peringatan Dini (SPD) Berbasis Model:**
-    * **AI-1:** Bentuk tim implementasi lintas fungsi (Akademik, IT, Kemahasiswaan/Konseling) untuk merancang dan menguji coba prototipe sistem peringatan dini berdasarkan model prediktif yang telah dikembangkan. (Target: Q3 tahun berjalan).
-    * **AI-2:** Integrasikan output model (daftar mahasiswa berisiko `Dropout` beserta skor risiko dan faktor utamanya) ke dalam dashboard atau alat bantu yang mudah diakses oleh tim konseling dan dosen wali. (Target: Mulai semester depan).
+1.  **Pengembangan dan Implementasi Sistem Peringatan Dini (Early Warning System - EWS):**
 
-2.  **Fokus Intervensi pada Faktor Kunci yang Teridentifikasi:**
-    * **AI-3:** Berdasarkan fitur-fitur paling berpengaruh seperti **[SEBUTKAN 1-2 FITUR KUNCI AKTUAL DARI HASIL ANDA, contoh: nilai semester awal dan status pembayaran SPP]**, selenggarakan pelatihan bagi dosen wali dan staf akademik mengenai strategi identifikasi dini dan pendekatan dukungan yang sesuai. (Target: Dalam 2 bulan ke depan).
-    * **AI-4:** Kaji ulang dan sesuaikan kebijakan terkait dukungan finansial, beasiswa, atau fleksibilitas pembayaran SPP jika fitur seperti `Tuition fees up to date` terbukti sangat signifikan dalam memprediksi risiko `Dropout`. (Target: Dalam 3 bulan ke depan).
+      * Manfaatkan model prediktif yang telah dibangun sebagai inti dari EWS untuk mengidentifikasi mahasiswa berisiko *dropout* sejak dini.
+      * Integrasikan EWS dengan dashboard pemantauan yang dapat diakses oleh dosen wali, konselor, dan manajemen akademik untuk tindak lanjut yang cepat.
 
-3.  **Pengembangan Program Intervensi yang Ditargetkan:**
-    * **AI-5:** Luncurkan program pendampingan (mentoring) akademik atau program tutorial tambahan yang ditargetkan bagi mahasiswa baru atau mahasiswa semester awal yang teridentifikasi memiliki skor prediksi risiko `Dropout` tertinggi oleh model. (Target: Mulai penerimaan mahasiswa baru/semester berikutnya).
-    * **AI-6:** Kembangkan modul intervensi spesifik (misalnya, manajemen waktu, strategi belajar efektif, konseling stres, bantuan penulisan akademik) yang dapat diakses oleh mahasiswa yang teridentifikasi berisiko.
+2.  **Penguatan Program Dukungan Akademik di Semester Awal:**
 
-4.  **Pemanfaatan Data untuk Peningkatan Kurikulum dan Proses Pembelajaran:**
-    * **AI-7:** Jika fitur terkait unit kurikuler atau nilai mata kuliah tertentu sangat dominan sebagai prediktor kegagalan (misalnya, **[SEBUTKAN FITUR KURIKULER SPESIFIK JIKA ADA DARI HASIL ANDA]**), lakukan evaluasi mendalam terhadap kurikulum, metode pengajaran, beban studi, atau sistem penilaian pada mata kuliah/area tersebut.
+      * Mengingat `Curricular units 1st sem (approved)` dan `Curricular units 2nd sem (approved)` adalah faktor kunci, sediakan program pendampingan akademik (mentoring, tutoring) yang intensif bagi mahasiswa baru, terutama yang menunjukkan kesulitan awal.
+      * Kaji ulang kurikulum atau metode pengajaran pada mata kuliah semester awal yang mungkin memiliki tingkat kegagalan tinggi.
 
-5.  **Pengembangan dan Pemeliharaan Model Secara Berkelanjutan:**
-    * **AI-8:** Jadwalkan evaluasi dan pelatihan ulang (retraining) model prediktif secara periodik (misalnya, setiap akhir tahun ajaran atau setiap semester) dengan menggunakan data terbaru untuk memastikan akurasi dan relevansinya terhadap dinamika populasi mahasiswa.
-    * **AI-9:** Pertimbangkan untuk melakukan eksplorasi pengumpulan data tambahan yang relevan (misalnya, data aktivitas di Learning Management System (LMS), data kehadiran yang lebih detail, hasil survei keterlibatan mahasiswa, frekuensi konsultasi dengan dosen) untuk potensi peningkatan akurasi model di masa mendatang.
-    * **AI-10:** Budayakan pengambilan keputusan berbasis data di semua tingkatan yang terkait dengan kemahasiswaan dan akademik, dengan memanfaatkan wawasan dari model ini dan analisis data lainnya.
+3.  **Optimalisasi Program Bantuan Finansial dan Beasiswa:**
 
-*(Pastikan untuk menyesuaikan rekomendasi action items ini dengan temuan spesifik dari proyek Anda, terutama fitur-fitur yang paling berpengaruh dan metrik performa model yang aktual).*
+      * Perkuat dan perluas program beasiswa (`Scholarship holder` terbukti sangat efektif) dan pastikan prosesnya transparan serta menjangkau mahasiswa yang berhak dan berpotensi.
+      * Kembangkan skema bantuan pembayaran SPP yang lebih fleksibel atau program bantuan finansial darurat bagi mahasiswa yang teridentifikasi mengalami kesulitan pembayaran (`Tuition fees up to date` sebagai faktor penting).
+
+4.  **Penyediaan Dukungan Khusus Berdasarkan Profil Mahasiswa:**
+    * **Dukungan berbasis Usia:** Rancang program dukungan atau jalur studi yang lebih fleksibel untuk mahasiswa yang mendaftar pada usia lebih dewasa (`Age at enrollment`), mempertimbangkan potensi komitmen kerja atau keluarga mereka.
+    * **Dukungan berbasis Status Pernikahan:** Sediakan layanan konseling atau dukungan yang mempertimbangkan tantangan spesifik mahasiswa yang sudah menikah, bercerai, atau berpisah, mengingat tren *dropout* yang lebih tinggi pada kelompok ini.
+    * **Dukungan berbasis Gender:** Lakukan analisis lebih lanjut mengenai perbedaan tren antara gender. Jika terbukti signifikan, pertimbangkan program mentoring atau kelompok dukungan yang mungkin lebih sesuai untuk masing-masing gender.
+    
+5.  **Peningkatan Keterlibatan dan Kesejahteraan Mahasiswa:**
+
+      * Selenggarakan program orientasi yang komprehensif untuk membantu mahasiswa baru beradaptasi dengan kehidupan kampus, baik secara akademik maupun sosial.
+      * Tingkatkan layanan konseling (psikologis, karir, akademik) dan sosialisasikan ketersediaannya secara luas.
+
+6.  **Pengambilan Keputusan Berbasis Data Secara Berkelanjutan:**
+
+      * Jadikan dashboard analisa siswa sebagai alat monitoring rutin bagi manajemen untuk melacak tren dan efektivitas intervensi.
+      * Secara periodik (misalnya, setiap tahun ajaran), lakukan evaluasi dan *retraining* model prediktif dengan data terbaru untuk menjaga akurasinya. Kumpulkan juga data kualitatif untuk melengkapi temuan kuantitatif.
+
+## Author
+Felicia Pangestu [Linkedin](https://www.linkedin.com/in/felicia-pangestu-764905226/) 
