@@ -1,0 +1,1473 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0520.1026                               -->
+<workbook original-version='18.1' source-build='2025.1.2 (20251.25.0520.1026)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='JayaJayaInstitut_17486987118240' path='/workbooks' revision='1.2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='data.csv (Multiple Connections)' inline='true' name='federated.1nuyzdv14cidhz1d8wzdr1sj2b62' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='data' name='textscan.15ewxvg00tbbxm15ukxpu1h0dfc4'>
+            <connection class='textscan' directory='C:/Users/Felicia Pangestu/OneDrive/Documents/Dicoding/Dicoding Penerapan Data Science/Educational Institution Problems/solving-educational-institution-problems' filename='data.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+          <named-connection caption='feature_importances' name='textscan.1y8yitk08e7j7m1bupdvz1qpva1b'>
+            <connection class='textscan' directory='C:/Users/Felicia Pangestu/OneDrive/Documents/Dicoding/Dicoding Penerapan Data Science/Educational Institution Problems/solving-educational-institution-problems' filename='feature_importances.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.15ewxvg00tbbxm15ukxpu1h0dfc4' name='data.csv' table='[data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+            <column datatype='integer' name='Marital_status' ordinal='0' />
+            <column datatype='integer' name='Application_mode' ordinal='1' />
+            <column datatype='integer' name='Application_order' ordinal='2' />
+            <column datatype='integer' name='Course' ordinal='3' />
+            <column datatype='integer' name='Daytime_evening_attendance' ordinal='4' />
+            <column datatype='integer' name='Previous_qualification' ordinal='5' />
+            <column datatype='string' name='Previous_qualification_grade' ordinal='6' />
+            <column datatype='integer' name='Nacionality' ordinal='7' />
+            <column datatype='integer' name='Mothers_qualification' ordinal='8' />
+            <column datatype='integer' name='Fathers_qualification' ordinal='9' />
+            <column datatype='integer' name='Mothers_occupation' ordinal='10' />
+            <column datatype='integer' name='Fathers_occupation' ordinal='11' />
+            <column datatype='string' name='Admission_grade' ordinal='12' />
+            <column datatype='integer' name='Displaced' ordinal='13' />
+            <column datatype='integer' name='Educational_special_needs' ordinal='14' />
+            <column datatype='integer' name='Debtor' ordinal='15' />
+            <column datatype='integer' name='Tuition_fees_up_to_date' ordinal='16' />
+            <column datatype='integer' name='Gender' ordinal='17' />
+            <column datatype='integer' name='Scholarship_holder' ordinal='18' />
+            <column datatype='integer' name='Age_at_enrollment' ordinal='19' />
+            <column datatype='integer' name='International' ordinal='20' />
+            <column datatype='integer' name='Curricular_units_1st_sem_credited' ordinal='21' />
+            <column datatype='integer' name='Curricular_units_1st_sem_enrolled' ordinal='22' />
+            <column datatype='integer' name='Curricular_units_1st_sem_evaluations' ordinal='23' />
+            <column datatype='integer' name='Curricular_units_1st_sem_approved' ordinal='24' />
+            <column datatype='string' name='Curricular_units_1st_sem_grade' ordinal='25' />
+            <column datatype='integer' name='Curricular_units_1st_sem_without_evaluations' ordinal='26' />
+            <column datatype='integer' name='Curricular_units_2nd_sem_credited' ordinal='27' />
+            <column datatype='integer' name='Curricular_units_2nd_sem_enrolled' ordinal='28' />
+            <column datatype='integer' name='Curricular_units_2nd_sem_evaluations' ordinal='29' />
+            <column datatype='integer' name='Curricular_units_2nd_sem_approved' ordinal='30' />
+            <column datatype='string' name='Curricular_units_2nd_sem_grade' ordinal='31' />
+            <column datatype='integer' name='Curricular_units_2nd_sem_without_evaluations' ordinal='32' />
+            <column datatype='string' name='Unemployment_rate' ordinal='33' />
+            <column datatype='string' name='Inflation_rate' ordinal='34' />
+            <column datatype='string' name='GDP' ordinal='35' />
+            <column datatype='string' name='Status' ordinal='36' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rp&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;;&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_ID&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Marital_status</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Marital_status]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Marital_status</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Application_mode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Application_mode]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Application_mode</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Application_order</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Application_order]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Application_order</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Course</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Course]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Course</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Daytime_evening_attendance</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Daytime_evening_attendance]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Daytime_evening_attendance</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Previous_qualification</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Previous_qualification]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Previous_qualification</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Previous_qualification_grade</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Previous_qualification_grade]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Previous_qualification_grade</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Nacionality</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Nacionality]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Nacionality</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mothers_qualification</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Mothers_qualification]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Mothers_qualification</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fathers_qualification</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Fathers_qualification]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Fathers_qualification</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Mothers_occupation</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Mothers_occupation]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Mothers_occupation</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fathers_occupation</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Fathers_occupation]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Fathers_occupation</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Admission_grade</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Admission_grade]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Admission_grade</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Displaced</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Displaced]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Displaced</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Educational_special_needs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Educational_special_needs]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Educational_special_needs</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Debtor</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Debtor]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Debtor</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Tuition_fees_up_to_date</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Tuition_fees_up_to_date]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Tuition_fees_up_to_date</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Gender]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Gender</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Scholarship_holder</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Scholarship_holder]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Scholarship_holder</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Age_at_enrollment</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Age_at_enrollment]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Age_at_enrollment</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>International</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[International]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>International</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Curricular_units_1st_sem_credited</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Curricular_units_1st_sem_credited]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Curricular_units_1st_sem_credited</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Curricular_units_1st_sem_enrolled</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Curricular_units_1st_sem_enrolled]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Curricular_units_1st_sem_enrolled</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Curricular_units_1st_sem_evaluations</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Curricular_units_1st_sem_evaluations]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Curricular_units_1st_sem_evaluations</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Curricular_units_1st_sem_approved</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Curricular_units_1st_sem_approved]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Curricular_units_1st_sem_approved</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Curricular_units_1st_sem_grade</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Curricular_units_1st_sem_grade]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Curricular_units_1st_sem_grade</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Curricular_units_1st_sem_without_evaluations</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Curricular_units_1st_sem_without_evaluations]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Curricular_units_1st_sem_without_evaluations</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Curricular_units_2nd_sem_credited</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Curricular_units_2nd_sem_credited]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Curricular_units_2nd_sem_credited</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Curricular_units_2nd_sem_enrolled</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Curricular_units_2nd_sem_enrolled]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Curricular_units_2nd_sem_enrolled</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Curricular_units_2nd_sem_evaluations</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Curricular_units_2nd_sem_evaluations]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Curricular_units_2nd_sem_evaluations</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Curricular_units_2nd_sem_approved</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Curricular_units_2nd_sem_approved]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Curricular_units_2nd_sem_approved</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Curricular_units_2nd_sem_grade</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Curricular_units_2nd_sem_grade]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Curricular_units_2nd_sem_grade</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Curricular_units_2nd_sem_without_evaluations</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Curricular_units_2nd_sem_without_evaluations]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Curricular_units_2nd_sem_without_evaluations</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Unemployment_rate</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Unemployment_rate]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Unemployment_rate</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Inflation_rate</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Inflation_rate]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Inflation_rate</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GDP</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[GDP]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>GDP</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Status]</local-name>
+            <parent-name>[data.csv]</parent-name>
+            <remote-alias>Status</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Admission grade' datatype='string' name='[Admission_grade]' role='dimension' type='nominal' />
+      <column caption='Age at enrollment' datatype='integer' name='[Age_at_enrollment]' role='measure' type='quantitative' />
+      <column caption='Application mode' datatype='integer' name='[Application_mode]' role='measure' type='quantitative' />
+      <column caption='Application order' datatype='integer' name='[Application_order]' role='measure' type='quantitative' />
+      <column caption='Curricular units 1st sem approved' datatype='integer' name='[Curricular_units_1st_sem_approved]' role='measure' type='quantitative' />
+      <column caption='Curricular units 1st sem credited' datatype='integer' name='[Curricular_units_1st_sem_credited]' role='measure' type='quantitative' />
+      <column caption='Curricular units 1st sem enrolled' datatype='integer' name='[Curricular_units_1st_sem_enrolled]' role='measure' type='quantitative' />
+      <column caption='Curricular units 1st sem evaluations' datatype='integer' name='[Curricular_units_1st_sem_evaluations]' role='measure' type='quantitative' />
+      <column caption='Curricular units 1st sem grade' datatype='string' name='[Curricular_units_1st_sem_grade]' role='dimension' type='nominal' />
+      <column caption='Curricular units 1st sem without evaluations' datatype='integer' name='[Curricular_units_1st_sem_without_evaluations]' role='measure' type='quantitative' />
+      <column caption='Curricular units 2nd sem approved' datatype='integer' name='[Curricular_units_2nd_sem_approved]' role='measure' type='quantitative' />
+      <column caption='Curricular units 2nd sem credited' datatype='integer' name='[Curricular_units_2nd_sem_credited]' role='measure' type='quantitative' />
+      <column caption='Curricular units 2nd sem enrolled' datatype='integer' name='[Curricular_units_2nd_sem_enrolled]' role='measure' type='quantitative' />
+      <column caption='Curricular units 2nd sem evaluations' datatype='integer' name='[Curricular_units_2nd_sem_evaluations]' role='measure' type='quantitative' />
+      <column caption='Curricular units 2nd sem grade' datatype='string' name='[Curricular_units_2nd_sem_grade]' role='dimension' type='nominal' />
+      <column caption='Curricular units 2nd sem without evaluations' datatype='integer' name='[Curricular_units_2nd_sem_without_evaluations]' role='measure' type='quantitative' />
+      <column caption='Daytime evening attendance' datatype='integer' name='[Daytime_evening_attendance]' role='measure' type='quantitative' />
+      <column caption='Educational special needs' datatype='integer' name='[Educational_special_needs]' role='measure' type='quantitative' />
+      <column caption='Fathers occupation' datatype='integer' name='[Fathers_occupation]' role='measure' type='quantitative' />
+      <column caption='Fathers qualification' datatype='integer' name='[Fathers_qualification]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Gender (group)]' role='dimension' type='ordinal'>
+        <calculation class='categorical-bin' column='[Gender]' new-bin='true'>
+          <bin default-name='false' value='&quot;Female&quot;'>
+            <value>0</value>
+          </bin>
+          <bin default-name='false' value='&quot;Male&quot;'>
+            <value>1</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='integer' name='[Gender]' role='measure' type='quantitative' />
+      <column caption='Inflation rate' datatype='string' name='[Inflation_rate]' role='dimension' type='nominal' />
+      <column caption='Marital status' datatype='integer' name='[Marital_status]' role='measure' type='quantitative' />
+      <column caption='Mothers occupation' datatype='integer' name='[Mothers_occupation]' role='measure' type='quantitative' />
+      <column caption='Mothers qualification' datatype='integer' name='[Mothers_qualification]' role='measure' type='quantitative' />
+      <column caption='Previous qualification' datatype='integer' name='[Previous_qualification]' role='measure' type='quantitative' />
+      <column caption='Previous qualification grade' datatype='string' name='[Previous_qualification_grade]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Scholarship holder (group)]' role='dimension' type='ordinal'>
+        <calculation class='categorical-bin' column='[Scholarship_holder]' new-bin='true'>
+          <bin default-name='true' value='&quot;0&quot;'>
+            <value>0</value>
+          </bin>
+          <bin default-name='true' value='&quot;1&quot;'>
+            <value>1</value>
+          </bin>
+        </calculation>
+      </column>
+      <column caption='Scholarship holder' datatype='integer' name='[Scholarship_holder]' role='measure' type='quantitative' />
+      <column caption='Tuition fees up to date' datatype='integer' name='[Tuition_fees_up_to_date]' role='measure' type='quantitative' />
+      <column caption='Unemployment rate' datatype='string' name='[Unemployment_rate]' role='dimension' type='nominal' />
+      <column caption='data.csv' datatype='table' name='[__tableau_internal_object_id__].[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]' role='measure' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/FELICI~1/AppData/Local/Temp/TableauTemp/#TableauTemp_123qh4q1dml4zy188t22e1wah5d5.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Marital_status</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Marital_status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Marital_status</remote-alias>
+              <ordinal>0</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Application_mode</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Application_mode]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Application_mode</remote-alias>
+              <ordinal>1</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Application_order</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Application_order]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Application_order</remote-alias>
+              <ordinal>2</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Course</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Course]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Course</remote-alias>
+              <ordinal>3</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Daytime_evening_attendance</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Daytime_evening_attendance]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Daytime_evening_attendance</remote-alias>
+              <ordinal>4</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Previous_qualification</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Previous_qualification]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Previous_qualification</remote-alias>
+              <ordinal>5</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Previous_qualification_grade</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Previous_qualification_grade]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Previous_qualification_grade</remote-alias>
+              <ordinal>6</ordinal>
+              <family>data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>84</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Nacionality</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Nacionality]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Nacionality</remote-alias>
+              <ordinal>7</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mothers_qualification</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Mothers_qualification]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mothers_qualification</remote-alias>
+              <ordinal>8</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Fathers_qualification</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Fathers_qualification]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Fathers_qualification</remote-alias>
+              <ordinal>9</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>30</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Mothers_occupation</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Mothers_occupation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Mothers_occupation</remote-alias>
+              <ordinal>10</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>34</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Fathers_occupation</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Fathers_occupation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Fathers_occupation</remote-alias>
+              <ordinal>11</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>34</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Admission_grade</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Admission_grade]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Admission_grade</remote-alias>
+              <ordinal>12</ordinal>
+              <family>data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>578</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Displaced</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Displaced]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Displaced</remote-alias>
+              <ordinal>13</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Educational_special_needs</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Educational_special_needs]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Educational_special_needs</remote-alias>
+              <ordinal>14</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Debtor</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Debtor]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Debtor</remote-alias>
+              <ordinal>15</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Tuition_fees_up_to_date</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Tuition_fees_up_to_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Tuition_fees_up_to_date</remote-alias>
+              <ordinal>16</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Gender</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Gender]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Gender</remote-alias>
+              <ordinal>17</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Scholarship_holder</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Scholarship_holder]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Scholarship_holder</remote-alias>
+              <ordinal>18</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Age_at_enrollment</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Age_at_enrollment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Age_at_enrollment</remote-alias>
+              <ordinal>19</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>46</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>International</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[International]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>International</remote-alias>
+              <ordinal>20</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Curricular_units_1st_sem_credited</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Curricular_units_1st_sem_credited]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Curricular_units_1st_sem_credited</remote-alias>
+              <ordinal>21</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Curricular_units_1st_sem_enrolled</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Curricular_units_1st_sem_enrolled]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Curricular_units_1st_sem_enrolled</remote-alias>
+              <ordinal>22</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>25</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Curricular_units_1st_sem_evaluations</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Curricular_units_1st_sem_evaluations]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Curricular_units_1st_sem_evaluations</remote-alias>
+              <ordinal>23</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>37</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Curricular_units_1st_sem_approved</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Curricular_units_1st_sem_approved]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Curricular_units_1st_sem_approved</remote-alias>
+              <ordinal>24</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>26</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Curricular_units_1st_sem_grade</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Curricular_units_1st_sem_grade]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Curricular_units_1st_sem_grade</remote-alias>
+              <ordinal>25</ordinal>
+              <family>data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>456</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Curricular_units_1st_sem_without_evaluations</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Curricular_units_1st_sem_without_evaluations]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Curricular_units_1st_sem_without_evaluations</remote-alias>
+              <ordinal>26</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Curricular_units_2nd_sem_credited</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Curricular_units_2nd_sem_credited]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Curricular_units_2nd_sem_credited</remote-alias>
+              <ordinal>27</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>19</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Curricular_units_2nd_sem_enrolled</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Curricular_units_2nd_sem_enrolled]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Curricular_units_2nd_sem_enrolled</remote-alias>
+              <ordinal>28</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>23</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Curricular_units_2nd_sem_evaluations</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Curricular_units_2nd_sem_evaluations]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Curricular_units_2nd_sem_evaluations</remote-alias>
+              <ordinal>29</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>31</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Curricular_units_2nd_sem_approved</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Curricular_units_2nd_sem_approved]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Curricular_units_2nd_sem_approved</remote-alias>
+              <ordinal>30</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Curricular_units_2nd_sem_grade</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Curricular_units_2nd_sem_grade]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Curricular_units_2nd_sem_grade</remote-alias>
+              <ordinal>31</ordinal>
+              <family>data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>453</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Curricular_units_2nd_sem_without_evaluations</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Curricular_units_2nd_sem_without_evaluations]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Curricular_units_2nd_sem_without_evaluations</remote-alias>
+              <ordinal>32</ordinal>
+              <family>data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Unemployment_rate</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Unemployment_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Unemployment_rate</remote-alias>
+              <ordinal>33</ordinal>
+              <family>data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Inflation_rate</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Inflation_rate]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Inflation_rate</remote-alias>
+              <ordinal>34</ordinal>
+              <family>data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>GDP</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[GDP]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>GDP</remote-alias>
+              <ordinal>35</ordinal>
+              <family>data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Status</remote-alias>
+              <ordinal>36</ordinal>
+              <family>data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[Gender (group)]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Male&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;Female&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Indonesia&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='data.csv' id='data.csv_8AB57FCD0AB5446CB8182F16A8DE740D'>
+            <properties context=''>
+              <relation connection='textscan.15ewxvg00tbbxm15ukxpu1h0dfc4' name='data.csv' table='[data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_ID' separator=';'>
+                  <column datatype='integer' name='Marital_status' ordinal='0' />
+                  <column datatype='integer' name='Application_mode' ordinal='1' />
+                  <column datatype='integer' name='Application_order' ordinal='2' />
+                  <column datatype='integer' name='Course' ordinal='3' />
+                  <column datatype='integer' name='Daytime_evening_attendance' ordinal='4' />
+                  <column datatype='integer' name='Previous_qualification' ordinal='5' />
+                  <column datatype='string' name='Previous_qualification_grade' ordinal='6' />
+                  <column datatype='integer' name='Nacionality' ordinal='7' />
+                  <column datatype='integer' name='Mothers_qualification' ordinal='8' />
+                  <column datatype='integer' name='Fathers_qualification' ordinal='9' />
+                  <column datatype='integer' name='Mothers_occupation' ordinal='10' />
+                  <column datatype='integer' name='Fathers_occupation' ordinal='11' />
+                  <column datatype='string' name='Admission_grade' ordinal='12' />
+                  <column datatype='integer' name='Displaced' ordinal='13' />
+                  <column datatype='integer' name='Educational_special_needs' ordinal='14' />
+                  <column datatype='integer' name='Debtor' ordinal='15' />
+                  <column datatype='integer' name='Tuition_fees_up_to_date' ordinal='16' />
+                  <column datatype='integer' name='Gender' ordinal='17' />
+                  <column datatype='integer' name='Scholarship_holder' ordinal='18' />
+                  <column datatype='integer' name='Age_at_enrollment' ordinal='19' />
+                  <column datatype='integer' name='International' ordinal='20' />
+                  <column datatype='integer' name='Curricular_units_1st_sem_credited' ordinal='21' />
+                  <column datatype='integer' name='Curricular_units_1st_sem_enrolled' ordinal='22' />
+                  <column datatype='integer' name='Curricular_units_1st_sem_evaluations' ordinal='23' />
+                  <column datatype='integer' name='Curricular_units_1st_sem_approved' ordinal='24' />
+                  <column datatype='string' name='Curricular_units_1st_sem_grade' ordinal='25' />
+                  <column datatype='integer' name='Curricular_units_1st_sem_without_evaluations' ordinal='26' />
+                  <column datatype='integer' name='Curricular_units_2nd_sem_credited' ordinal='27' />
+                  <column datatype='integer' name='Curricular_units_2nd_sem_enrolled' ordinal='28' />
+                  <column datatype='integer' name='Curricular_units_2nd_sem_evaluations' ordinal='29' />
+                  <column datatype='integer' name='Curricular_units_2nd_sem_approved' ordinal='30' />
+                  <column datatype='string' name='Curricular_units_2nd_sem_grade' ordinal='31' />
+                  <column datatype='integer' name='Curricular_units_2nd_sem_without_evaluations' ordinal='32' />
+                  <column datatype='string' name='Unemployment_rate' ordinal='33' />
+                  <column datatype='string' name='Inflation_rate' ordinal='34' />
+                  <column datatype='string' name='GDP' ordinal='35' />
+                  <column datatype='string' name='Status' ordinal='36' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Gender'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Gender</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data.csv (Multiple Connections)' name='federated.1nuyzdv14cidhz1d8wzdr1sj2b62' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nuyzdv14cidhz1d8wzdr1sj2b62'>
+            <column datatype='string' name='[Gender (group)]' role='dimension' type='ordinal'>
+              <calculation class='categorical-bin' column='[Gender]' new-bin='true'>
+                <bin default-name='false' value='&quot;Female&quot;'>
+                  <value>0</value>
+                </bin>
+                <bin default-name='false' value='&quot;Male&quot;'>
+                  <value>1</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='integer' name='[Gender]' role='measure' type='quantitative' />
+            <column-instance column='[Gender]' derivation='Count' name='[cnt:Gender:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1nuyzdv14cidhz1d8wzdr1sj2b62].[Gender (group)]' />
+              <wedge-size column='[federated.1nuyzdv14cidhz1d8wzdr1sj2b62].[cnt:Gender:qk]' />
+              <size column='[federated.1nuyzdv14cidhz1d8wzdr1sj2b62].[cnt:Gender:qk]' />
+              <text column='[federated.1nuyzdv14cidhz1d8wzdr1sj2b62].[Gender (group)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{A0A00BD0-27BB-4752-9916-60E0FD4CE795}' />
+    </worksheet>
+    <worksheet name='Scholarship'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data.csv (Multiple Connections)' name='federated.1nuyzdv14cidhz1d8wzdr1sj2b62' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nuyzdv14cidhz1d8wzdr1sj2b62'>
+            <column datatype='string' name='[Scholarship holder (group)]' role='dimension' type='ordinal'>
+              <calculation class='categorical-bin' column='[Scholarship_holder]' new-bin='true'>
+                <bin default-name='true' value='&quot;0&quot;'>
+                  <value>0</value>
+                </bin>
+                <bin default-name='true' value='&quot;1&quot;'>
+                  <value>1</value>
+                </bin>
+              </calculation>
+            </column>
+            <column caption='Scholarship holder' datatype='integer' name='[Scholarship_holder]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1nuyzdv14cidhz1d8wzdr1sj2b62].[Scholarship holder (group)]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{BC11A11A-4E8D-4946-BC43-2D99D705B6A7}' />
+    </worksheet>
+    <worksheet name='Total'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Student&apos;s Total</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='data.csv (Multiple Connections)' name='federated.1nuyzdv14cidhz1d8wzdr1sj2b62' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1nuyzdv14cidhz1d8wzdr1sj2b62'>
+            <column-instance column='[__tableau_internal_object_id__].[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:data.csv_8AB57FCD0AB5446CB8182F16A8DE740D:qk]' pivot='key' type='quantitative' />
+            <column caption='data.csv' datatype='table' name='[__tableau_internal_object_id__].[data.csv_8AB57FCD0AB5446CB8182F16A8DE740D]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='20' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1nuyzdv14cidhz1d8wzdr1sj2b62].[__tableau_internal_object_id__].[cnt:data.csv_8AB57FCD0AB5446CB8182F16A8DE740D:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{F636B8E7-CEB0-470E-A857-AFE484ECEE35}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='860' maxwidth='650' minheight='560' minwidth='420' />
+      <zones>
+        <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98004' id='13' param='horz' type-v2='layout-flow' w='97538' x='1231' y='998'>
+            <zone h='98004' id='11' type-v2='layout-basic' w='97538' x='1231' y='998'>
+              <zone h='98004' id='9' name='Gender' w='48769' x='50000' y='998'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='98004' id='20' name='Total' w='48769' x='1231' y='998'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='19' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98004' id='18' param='vert' type-v2='layout-flow' w='97538' x='1231' y='998'>
+                <zone fixed-size='280' h='98004' id='9' is-fixed='true' name='Gender' w='72923' x='1231' y='998'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9B1D874F-D943-441C-AE98-60781F67CC4D}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Gender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1nuyzdv14cidhz1d8wzdr1sj2b62].[Gender (group)]' type='color' />
+            <card pane-specification-id='0' param='[federated.1nuyzdv14cidhz1d8wzdr1sj2b62].[cnt:Gender:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B6861A10-5D20-49B0-BEEE-9D0F70DC00CD}' />
+    </window>
+    <window class='worksheet' name='Total'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A8BBCDB1-4C52-47B4-BAB2-FAFACFF7838C}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Gender'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{09AB28BC-A2B5-4A01-858E-4242A34B33B2}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Scholarship'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{869ABA2D-5695-443C-ABBB-57D148DE5122}' />
+    </window>
+  </windows>
+</workbook>
