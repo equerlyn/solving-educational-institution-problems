@@ -289,4 +289,4 @@ if submit_button:
         st.error("Pastikan semua input telah diisi dengan benar dan sesuai format yang diharapkan.")
 
 st.markdown("---")
-st.markdown("Dikembangkan oleh: Felicia Pangestu - Jaya Jaya Institut (Proyek Akhir Edutech)")
+st.markdown("© 2025 Felicia Pangestu · Jaya Jaya Institut. All rights reserved.")
